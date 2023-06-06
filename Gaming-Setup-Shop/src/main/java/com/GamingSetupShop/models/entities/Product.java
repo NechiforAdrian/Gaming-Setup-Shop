@@ -19,7 +19,7 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "Cases")
+    @Column(name = "pc_case")
     private String pcCase;
     @Column(name = "power_supply")
     private String powerSupply;
@@ -37,6 +37,12 @@ public class Product {
     private String solidStateDrive;
     @Column(name = "case_fan")
     private String caseFan;
+    @Column(name = "price")
+    private double price;
+    @Column(name = "colour")
+    private String colour;
+    @Column(name = "brand")
+    private String brand;
     @Column
     @ManyToMany(mappedBy = "products")
     private Set<Customer> customers;

@@ -7,7 +7,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.mapping.Component;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 @NoArgsConstructor
@@ -23,8 +22,6 @@ public class Order {
     private Long id;
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private List<Component> selectedComponents;
-    @Column(name = "order_date")
-    private LocalDateTime orderDate;
     @Column(name = "total_price")
     private double totalPrice;
     @Column(name = "shipping_address")
